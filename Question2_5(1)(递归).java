@@ -12,6 +12,7 @@ public class Plus {
     ListNode c = new ListNode(-1);
     ListNode p = c;
     int carry = 0;
+    
     public ListNode plusAB(ListNode a, ListNode b) {
         // write code here
         if (a != null && b != null) {
