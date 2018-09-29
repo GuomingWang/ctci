@@ -5,6 +5,14 @@ public class Solution {
     Stack<Integer> stack2 = new Stack<Integer>();
     
     public void push(int node) {
+        while (!stack2.empty()) {
+            Object obj = stack2.pop();
+            int value = -1;
+            if (obj instanceof Integer) {
+                value = (int)obj;
+            }
+            stack1.push(value);
+        }
         stack1.push(node);
     }
     
@@ -21,14 +29,6 @@ public class Solution {
         int getValue = -1;
         if (getObj instanceof Integer) {
             getValue = (int)getObj;
-        }
-        while (!stack2.empty()) {
-            Object obj = stack2.pop();
-            int value = -1;
-            if (obj instanceof Integer) {
-                value = (int)obj;
-            }
-            stack1.push(value);
         }
         return getValue;
     }
