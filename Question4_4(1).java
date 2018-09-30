@@ -24,11 +24,11 @@ public class TreeLevel {
             return;
         }
         LinkedList<TreeNode> innerList = null;
-        if (outerList.size() == level) {
+        if (outerList.size() == level) { // 初次到达level层
             innerList = new LinkedList<TreeNode>();
             outerList.add(innerList);
-        } else {
-            innerList = outerList.get(level);
+        } else { // 非初次到达level层
+            innerList = outerList.get(level); 
         }
         innerList.add(root);
         inOrder(root.left, outerList, level + 1);
