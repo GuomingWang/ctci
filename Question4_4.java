@@ -23,10 +23,10 @@ public class TreeLevel {
         LinkedList<LinkedList<TreeNode>> outerList = new LinkedList<>();
         LinkedList<TreeNode> innerList = new LinkedList<>();
         innerList.add(root);
-        while (!innerList.isEmpty()) {
+        while (!innerList.isEmpty()) { // innerList为空时表明已访问完最后一层
             outerList.add(innerList);
             LinkedList<TreeNode> parents = innerList;
-            innerList = new LinkedList();
+            innerList = new LinkedList(); // innerList用于存放子节点
             for (TreeNode parent : parents) {
                 if (parent.left != null) {
                     innerList.add(parent.left);
