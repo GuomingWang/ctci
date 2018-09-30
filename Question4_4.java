@@ -19,7 +19,7 @@ public class TreeNode {
     }
 }*/
 public class TreeLevel {
-    public LinkedList<LinkedList<TreeNode>> levelOrder(TreeNode root) { // BFS变形，使用二维数组
+    public LinkedList<LinkedList<TreeNode>> levelOrder(TreeNode root) { // BFS变形，二维数组行优先存放
         LinkedList<LinkedList<TreeNode>> outerList = new LinkedList<>();
         LinkedList<TreeNode> innerList = new LinkedList<>();
         innerList.add(root);
