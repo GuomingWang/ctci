@@ -19,7 +19,7 @@ public class TreeNode {
     }
 }*/
 public class TreeLevel {
-    public void inOrder(TreeNode root, LinkedList<LinkedList<TreeNode>> outerList, int level) { // DFS变形，使用二维数组
+    public void inOrder(TreeNode root, LinkedList<LinkedList<TreeNode>> outerList, int level) { // DFS变形，二维数组列优先存放
         if (root == null) {
             return;
         }
