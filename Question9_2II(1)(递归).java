@@ -6,10 +6,12 @@ public class Robot {
             return 0;
         } else if (x == 0 && y == 0) {
             return 1;
-        } else if (map[x][y] != 1) {
-            return 0;
         } else {
-            return count(map, x - 1, y) + count(map, x, y - 1);
+            if (map[x][y] != 1) {
+                return 0;
+            } else {
+                return count(map, x - 1, y) + count(map, x, y - 1);
+            }
         }
     }
 
