@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Robot {
-    public int getFactorial(int n) {
+    public double getFactorial(int n) {
         if (n == 0) {
             return 1;
         } else {
@@ -12,6 +12,6 @@ public class Robot {
         // write code here
         x--; // (1,1)-->(x,y)
         y--;
-        return getFactorial(x + y) / getFactorial(x) / getFactorial(y);
+        return (int)(getFactorial(x + y) / getFactorial(x) / getFactorial(y));
     }
 }
