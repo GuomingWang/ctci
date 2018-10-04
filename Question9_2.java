@@ -10,7 +10,7 @@ public class Robot {
     }
     public int countWays(int x, int y) {
         // write code here
-        x--; // (x,y)-->(1,1)
+        x--; // (1,1)-->(x,y)
         y--;
         return getFactorial(x + y) / getFactorial(x) / getFactorial(y);
     }
