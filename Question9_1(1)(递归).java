@@ -9,7 +9,7 @@ public class GoUpstairs {
             return 1;
         } else {
             return ((countWays(n - 1) + countWays(n - 2)) % 1000000007 + countWays(n - 3)) % 1000000007;
-            // 抵达最后一阶的走法，其实就是抵达这最后一阶的三种方式的方法总和。
+            // 抵达最后一阶的走法，其实就是抵达这最后一阶的三种方式（剩一阶跨一次、剩两阶跨一次、剩三阶跨一次）的方法总和。
         }
     }
 }
